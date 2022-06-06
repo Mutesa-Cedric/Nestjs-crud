@@ -6,7 +6,7 @@ import { AuthService } from "./auth.service";
 export class AuthController{
 
     //here, we have injected the AuthService (this is called dependency injection)
-    
+
     constructor(private authService: AuthService){
       
     }
@@ -16,7 +16,7 @@ export class AuthController{
     // signup
     @Post("signup")
     signup(){
-
+        this.authService.signup();
     }
 
     // signup
@@ -24,10 +24,8 @@ export class AuthController{
     // login
     @Post("signin")
     signin(){
-
+       this.authService.signin();
     }
-
     // login
-
-    
+   
 }
